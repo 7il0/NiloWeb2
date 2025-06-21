@@ -1,8 +1,8 @@
 document.addEventListener('DOMContentLoaded', () => {
-  fetch('/html/header.html')
+  fetch('html/header.html')
     .then(r => r.text())
     .then(html => document.getElementById('header-placeholder').innerHTML = html);
-  fetch('/html/footer.html')
+  fetch('html/footer.html')
     .then(r => r.text())
     .then(html => document.getElementById('footer-placeholder').innerHTML = html);
 

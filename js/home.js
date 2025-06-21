@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
   Promise.all([
-    fetch('/html/header.html').then(r => r.text()),
-    fetch('/html/footer.html').then(r => r.text())
+    fetch('html/header.html').then(r => r.text()),
+    fetch('html/footer.html').then(r => r.text())
   ]).then(([hdr, ftr]) => {
     document.getElementById('header-placeholder').innerHTML = hdr;
     document.getElementById('footer-placeholder').innerHTML = ftr;

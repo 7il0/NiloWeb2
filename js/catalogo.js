@@ -4,9 +4,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
 async function initPage() {
   const [ hdr, ftr, dlg ] = await Promise.all([
-    fetch('/html/header.html').then(r => r.text()),
-    fetch('/html/footer.html').then(r => r.text()),
-    fetch('/html/dialog.html').then(r => r.text())
+    fetch('html/header.html').then(r => r.text()),
+    fetch('html/footer.html').then(r => r.text()),
+    fetch('html/dialog.html').then(r => r.text())
   ]);
 
   document.getElementById('header-placeholder').innerHTML   = hdr;
@@ -18,11 +18,11 @@ async function initPage() {
 
 function setupCourses() {
   const courses = [
-    { id:1, title:'Intro a ML',          desc:'Conceptos básicos y ejercicios prácticos.', img:'/img/curso1.jpg' },
-    { id:2, title:'Redes Neuronales',    desc:'Diseña y entrena tus propias redes.',       img:'/img/curso2.png' },
-    { id:3, title:'Python Avanzado',     desc:'Automatiza tu flujo de ML con Python.',     img:'/img/curso3.jpg' },
-    { id:4, title:'Visión Computacional',desc:'Procesamiento de imágenes con ML.',        img:'/img/curso4.jpg' },
-    { id:5, title:'Procesamiento de Lenguaje', desc:'NLP y modelos de lenguaje.', img:'/img/curso5.png' }
+    { id:1, title:'Intro a ML',          desc:'Conceptos básicos y ejercicios prácticos.', img:'img/curso1.jpg' },
+    { id:2, title:'Redes Neuronales',    desc:'Diseña y entrena tus propias redes.',       img:'img/curso2.png' },
+    { id:3, title:'Python Avanzado',     desc:'Automatiza tu flujo de ML con Python.',     img:'img/curso3.jpg' },
+    { id:4, title:'Visión Computacional',desc:'Procesamiento de imágenes con ML.',        img:'img/curso4.jpg' },
+    { id:5, title:'Procesamiento de Lenguaje', desc:'NLP y modelos de lenguaje.', img:'img/curso5.png' }
   ];
 
   const list       = document.getElementById('courses-list');
